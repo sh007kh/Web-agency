@@ -184,3 +184,130 @@ p {
   margin-bottom: 4rem;
   text-align: center;
 }
+/* 
+=========
+navbar
+=========
+ */
+.navbar {
+  height: 5rem;
+  width: 100%;
+  color: var(--clr-grey-1);
+}
+.nav-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  transition: var(--transition);
+}
+.nav-header h2 {
+  margin-bottom: 0;
+}
+.nav-logo {
+  background-color: var(--clr-primary-5);
+  color: var(--clr-grey-3);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+}
+.nav-logo:hover {
+  color: var(--clr-primary-3);
+  background-color: var(--clr-primary-8);
+}
+.nav-logo:hover .nav-btn {
+  color: var(--clr-primary-2);
+}
+.nav-btn {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 0;
+  overflow: hidden;
+  background-color: #222;
+  transition: var(--transition);
+}
+.show-links {
+  height: 17.25rem;
+}
+.nav-link {
+  display: inline-block;
+  color: var(--clr-primary-5);
+  margin: 0.5rem;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  transition: var(--transition);
+}
+.nav-link:hover {
+  color: var(--clr-primary-8);
+}
+.divider {
+  background: linear-gradient(
+    to left,
+    rgb(209, 124, 12),
+    rgb(238, 223, 15),
+    rgb(209, 124, 12)
+  );
+  width: 100%;
+  height: 0.5rem;
+}
+
+.nav-btn:hover .fa-bars,
+.nav-btn .fa-arrow-down {
+  display: none;
+}
+.nav-btn:hover .fa-arrow-down {
+  display: inline;
+  color: var(--clr-primary-1);
+}
+.nav-btn:hover .fa-times,
+.nav-btn .fa-arrow-up {
+  display: none;
+}
+.nav-btn:hover .fa-arrow-up {
+  display: inline;
+  color: var(--clr-primary-1);
+}
+.show-btn .nav-btn:nth-child(1) {
+  display: none;
+}
+.show-btn .nav-btn:nth-child(2) {
+  display: block;
+}
+.nav-btn:nth-child(2) {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .nav-header {
+    grid-template-columns: 18.5rem 1fr;
+  }
+  .nav-logo {
+    text-align: center;
+  }
+  .nav-btn-container {
+    display: none;
+  }
+  .nav-links {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0.5rem;
+  }
+  .nav-link {
+    margin-right: 0.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .nav-links {
+    justify-content: space-around;
+  }
+}
