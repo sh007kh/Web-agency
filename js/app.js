@@ -7,3 +7,7 @@ navBtn.forEach(function (btn) {
     navBtnContainer.classList.toggle("show-btn");
   });
 });
+window.addEventListener("resize", function () {
+  if (window.innerWidth > 768) navLinks.classList.remove("show-links");
+  if (window.innerWidth > 768) navBtnContainer.classList.remove("show-btn");
+});
