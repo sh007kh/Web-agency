@@ -232,6 +232,7 @@ navbar
   overflow: hidden;
   background-color: #222;
   transition: var(--transition);
+  z-index: 3;
 }
 .show-links {
   height: 17.25rem;
