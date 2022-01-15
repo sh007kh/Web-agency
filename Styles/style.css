@@ -312,3 +312,31 @@ navbar
     justify-content: space-around;
   }
 }
+/* 
+=======
+hero
+=======
+*/
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/background-banner.jpg") center/cover no-repeat fixed;
+  min-height: calc(100vh - 5rem);
+  display: grid;
+  place-items: center;
+}
+.hero-title {
+  color: var(--clr-white);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.hero-btn-container {
+  text-align: center;
+}
+.hero-btn {
+  background: transparent;
+  border: 0.15rem solid var(--clr-primary-5);
+  color: var(--clr-primary-5);
+  padding: 0.75rem 1.2rem;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
