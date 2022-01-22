@@ -23,6 +23,7 @@ window.addEventListener("scroll", function () {
     navBar.classList.remove("fixed-navbar");
   }
 });
+// close navbar after click on link
 navLink.forEach(function (link) {
   link.addEventListener("click", function () {
     navLinks.classList.remove("show-links");
