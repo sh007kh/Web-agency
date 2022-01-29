@@ -3,6 +3,10 @@ const navLinks = document.querySelectorAll(".nav-link");
 const navBtn = document.querySelectorAll(".nav-btn");
 const navBar = document.querySelector(".navbar");
 const navBtnContainer = document.querySelector(".nav-btn-container");
+
+const postContainer = document.querySelectorAll(".post");
+const sliderLeft = document.querySelector(".slider-left");
+const sliderRight = document.querySelector(".slider-right");
 // nav-btn toggle
 navBtn.forEach(function (btn) {
   btn.addEventListener("click", function () {
@@ -60,3 +64,29 @@ function windowScroll(position) {
     behavior: "smooth",
   });
 }
+// slider
+postContainer.forEach(function (post, index) {
+  post.style.left = `${index * 100}%`;
+});
+let counter = 0;
+sliderLeft.addEventListener("click", function () {
+  counter--;
+  if (counter < 0) {
+    counter = 2;
+  }
+
+  postContainer.forEach(function (post) {
+    post.style.transform = `translateX(-${counter * 100}%)`;
+  });
+  console.log(`left ${counter}`);
+});
+sliderRight.addEventListener("click", function () {
+  counter++;
+  if (counter > 2) {
+    counter = 0;
+  }
+  postContainer.forEach(function (post) {
+    post.style.transform = `translateX(-${counter * 100}%)`;
+    console.log(`right ${counter}`);
+  });
+});
