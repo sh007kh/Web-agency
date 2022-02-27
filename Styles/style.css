@@ -888,12 +888,21 @@ password checker
   transform: rotateY(0);
 }
 @media screen and (min-width: 768px) {
+  .form-center {
+    max-width: 100vw;
+  }
   .form-side {
     width: 60vw;
-    max-width: 60vw;
+    max-width: 100vw;
     height: 70%;
     top: 120px;
     left: 20%;
     min-height: 60vh;
+  }
+}
+@media screen and (min-width: 992px) {
+  .form-side {
+    left: 30%;
+    width: 40vw;
   }
 }
