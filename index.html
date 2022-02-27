@@ -12,12 +12,82 @@
   </head>
 
   <body>
+    <!-- login form -->
+    <div class="section-center form-center show-form">
+      <form class="form-side login">
+        <button class="close-btn" type="button" id="form-close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+        <h3>sign in</h3>
+        <div class="form-control">
+          <input
+            type="username"
+            name="username"
+            id="username"
+            placeholder="enter your username"
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="enter your password"
+          />
+          <button class="submit-btn" type="submit" id="submit">login</button>
+        </div>
+        <p class="sign-up-btn">
+          don't have an account?<br /><span> sign up now! </span>
+        </p>
+        <div class="alert-container">
+          <!-- <p class="alert"></p> -->
+        </div>
+        <a href="recovery.html" class="login-forgot">
+          forgot your password?
+          <span>
+            <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+      </form>
+      <form class="form-side sign-up">
+        <button class="close-btn" id="form-close-btn" type="button">
+          <i class="fas fa-times"></i>
+        </button>
+        <h3>sign up</h3>
+        <div class="form-control">
+          <input
+            type="username"
+            name="username"
+            id="username"
+            placeholder="enter your username"
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="email@email.com"
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="enter your password"
+          />
+          <button class="submit-btn" type="submit" id="submit">sign up</button>
+        </div>
+        <p class="sign-up-btn">
+          already have an account?<br /><span> sign in now! </span>
+        </p>
+        <div class="alert-container">
+          <!-- <p class="alert"></p> -->
+        </div>
+      </form>
+    </div>
     <!-- navbar -->
     <nav class="navbar">
       <div class="divider"></div>
       <div class="nav-header">
         <div class="nav-logo">
           <h2>web agency</h2>
+
           <div class="nav-btn-container">
             <span class="nav-btn">
               <i class="fas fa-bars"></i>
@@ -47,6 +117,14 @@
           </li>
           <li>
             <a href="#posts" class="nav-link">posts</a>
+          </li>
+          <li>
+            <button class="login-btn nav-link">
+              login
+              <span>
+                <i class="fa fa-key"></i>
+              </span>
+            </button>
           </li>
         </ul>
       </div>
