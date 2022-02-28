@@ -145,6 +145,7 @@ signUpForm.addEventListener("submit", function (e) {
   console.log(`password is ${passwordHolder}`);
   // checkLocalStorage(usernameHolder, passwordHolder);
   if (checkLocalStorage(usernameHolder, emailHolder)) {
+    alertStore(processAlert("username already existed ", "red"));
     console.log("username already existed ");
   } else if (checkEmailLocalStorage(emailHolder)) {
     console.log("email already existed ");
@@ -224,7 +225,6 @@ function checkLocalStorage(username, email) {
     }
   });
   if (items) {
-    alertStore(processAlert("username already existed ", "red"));
     return true;
   }
 }
