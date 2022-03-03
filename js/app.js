@@ -77,30 +77,109 @@ function windowScroll(position) {
   });
 }
 // slider
-postContainer.forEach(function (post, index) {
-  post.style.left = `${index * 100}%`;
-});
-let counter = 0;
-sliderLeft.addEventListener("click", function () {
-  counter--;
-  if (counter < 0) {
-    counter = 2;
+//================= carousel =================
+const imagesArray = [
+  {
+    url: "./images/post-1.jpg",
+    alt: "some people gathering together",
+    heading: "react community",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum odit veniam consequuntur.",
+  },
+  {
+    url: "./images/post-2.jpg",
+    alt: "some people around table",
+    heading: "angular for organizations",
+    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel in recusandae culpa!",
+  },
+  {
+    url: "./images/post-3.jpeg",
+    alt: "some people gathering together",
+    heading: "vanilla javascript",
+    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum et illo quas.",
+  },
+  {
+    url: "./images/post-4.jpg",
+    alt: "some word play",
+    heading: "SEO",
+    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum et illo quas.",
+  },
+  {
+    url: "./images/post-5.jpg",
+    alt: "some people gathering together",
+    heading: "UI/UX Design",
+    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum et illo quas.",
+  },
+];
+const prevBtn = document.querySelector(".slider-left");
+const nextBtn = document.querySelector(".slider-right");
+const slide = document.querySelector(".posts-container");
+const root = document.querySelector(":root");
+let slideIndex = 1;
+let slideMoving = false;
+// listeners
+prevBtn.addEventListener("click", function () {
+  if (slideMoving) {
+    return;
   }
-  postContainer.forEach(function (post) {
-    post.style.transform = `translateX(-${counter * 100}%)`;
-  });
-  console.log(`left ${counter}`);
+  moveHandler();
 });
-sliderRight.addEventListener("click", function () {
-  counter++;
-  if (counter > 2) {
-    counter = 0;
+nextBtn.addEventListener("click", function () {
+  if (slideMoving) {
+    return;
   }
-  postContainer.forEach(function (post) {
-    post.style.transform = `translateX(-${counter * 100}%)`;
-    console.log(`right ${counter}`);
-  });
+  moveHandler("right");
 });
+// functions
+// ===========
+// fetch images
+function fetchImages() {
+  imagesArray.push(imagesArray[0]);
+  imagesArray.unshift(imagesArray[imagesArray.length - 2]);
+  slide.innerHTML = imagesArray.map(processImages).join("");
+  moveSlides();
+}
+fetchImages();
+
+// change images into inner html blocks
+function processImages(item) {
+  return `<article class="post">
+            <img src="${item.url}" alt="${item.alt}" class="post-img" />
+            <div class="post-info">
+              <h4>${item.heading}</h4>
+              <p>
+                ${item.text}
+              </p>
+              <a href="#" class="btn btn-post">read more</a>
+            </div>
+          </article>`;
+}
+
+// moving slides
+function moveSlides() {
+  slide.style.transform = `translateX(-${slideIndex * 100}%)`;
+}
+// move slide when clicked
+function moveHandler(direction) {
+  slideMoving = true;
+  slide.style.transition = `all 0.4s linear `;
+  direction !== "right" ? (slideIndex -= 1) : (slideIndex += 1);
+  moveSlides();
+}
+slide.addEventListener("transitionend", () => {
+  slideMoving = false;
+  const slidesArray = [...slide.querySelectorAll(".post")];
+  if (slideIndex === 0) {
+    slide.style.transition = "none";
+    slideIndex = slidesArray.length - 2;
+    moveSlides();
+  }
+  if (slideIndex === slidesArray.length - 1) {
+    slide.style.transition = "none";
+    slideIndex = 1;
+    moveSlides();
+  }
+});
+
 // ****** SELECT ITEMS **********
 const loginForm = document.querySelector(".login");
 const signUpForm = document.querySelector(".sign-up");
@@ -270,3 +349,4 @@ function validateLocalStorage(username, password) {
 function setupItems() {
   return (items = getFromLocalStorage());
 }
+// **
