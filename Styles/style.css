@@ -914,3 +914,60 @@ password checker
     width: 40vw;
   }
 }
+/* 
+==========
+footer
+==========
+ */
+.footer {
+  background-color: #222;
+}
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-info {
+  display: flex;
+  width: 70%;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.footer-link {
+  font-size: 1.25rem;
+  display: inline-block;
+  text-transform: capitalize;
+  color: var(--clr-primary-5);
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+.footer-link:hover,
+.social-icon:hover {
+  color: var(--clr-primary-8);
+}
+.social-icon {
+  font-size: 1.75rem;
+  text-transform: capitalize;
+  color: var(--clr-primary-5);
+  transition: var(--transition);
+}
+.social-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.footer-text {
+  text-transform: capitalize;
+  background-color: #111;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 1rem;
+  text-align: center;
+  color: var(--clr-primary-8);
+}
+@media screen and (min-width: 992px) {
+}
