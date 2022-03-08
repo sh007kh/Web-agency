@@ -9,6 +9,7 @@ const sliderLeft = document.querySelector(".slider-left");
 const sliderRight = document.querySelector(".slider-right");
 const loginBtn = document.querySelector(".login-btn");
 const loginCloseBtn = document.querySelectorAll("#form-close-btn");
+const date = document.querySelector("#date");
 // ======== event listeners =========
 // login button
 loginBtn.addEventListener("click", function () {
@@ -350,3 +351,5 @@ function setupItems() {
   return (items = getFromLocalStorage());
 }
 // **
+// ==============date======== //
+date.innerHTML = new Date().getFullYear();
