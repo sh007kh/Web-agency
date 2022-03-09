@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Agency</title>
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-5.15.4-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./Styles/style.css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="divider"></div>
+      <div class="nav-header">
+        <div class="nav-logo">
+          <h2>web agency</h2>
+
+          <div class="nav-btn-container">
+            <span class="nav-btn">
+              <i class="fas fa-bars"></i>
+              <i class="fas fa-arrow-down"></i>
+            </span>
+            <span class="nav-btn">
+              <i class="fas fa-times"></i>
+              <i class="fas fa-arrow-up"></i>
+            </span>
+          </div>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="#home" class="nav-link">home</a>
+          </li>
+          <li>
+            <a href="#skills" class="nav-link">skills</a>
+          </li>
+          <li>
+            <a href="#services" class="nav-link">services</a>
+          </li>
+          <li>
+            <a href="#projects" class="nav-link">projects</a>
+          </li>
+          <li>
+            <a href="#contact" class="nav-link">contact</a>
+          </li>
+          <li>
+            <a href="#posts" class="nav-link">posts</a>
+          </li>
+          <li>
+            <button class="login-btn nav-link">
+              login
+              <span>
+                <i class="fa fa-key"></i>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="section-center hero-center">
+        <!-- login form -->
+        <div class="section-center recovery-form-center">
+          <form class="login-recovery">
+            <h3>recover your password</h3>
+            <button class="btn-back" type="button">
+              <span>
+                <i class="fas fa-arrow-left"></i>
+              </span>
+            </button>
+            <div class="form-control">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="enter your email"
+              />
+              <button class="submit-btn" type="submit" id="submit">
+                submit
+              </button>
+            </div>
+            <div class="alert-container">
+              <!-- <p class="alert"></p> -->
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <section class="footer">
+      <div class="section-center footer-center">
+        <div class="footer-info">
+          <ul class="footer-links">
+            <li>
+              <a href="faq.html" class="footer-link" target="_blank">FAQ</a>
+            </li>
+            <li>
+              <a href="about.html" class="footer-link" target="_blank"
+                >about us</a
+              >
+            </li>
+          </ul>
+          <!-- social icons -->
+          <ul class="social-icons">
+            <li>
+              <a
+                href="https://www.facebook.com"
+                class="social-icon"
+                target="_blank"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.twitter.com"
+                class="social-icon"
+                target="_blank"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com"
+                class="social-icon"
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.telegram.me"
+                class="social-icon"
+                target="_blank"
+              >
+                <i class="fab fa-telegram"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com"
+                class="social-icon"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+          <!-- end of social icons -->
+        </div>
+      </div>
+      <p class="footer-text">
+        &copy;<span id="date"></span> web agency. all rights reserved
+      </p>
+    </section>
+    <!-- script -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
