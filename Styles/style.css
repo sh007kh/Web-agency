@@ -957,7 +957,7 @@ footer
 }
 .social-icons {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 .footer-text {
@@ -969,5 +969,13 @@ footer
   text-align: center;
   color: var(--clr-primary-8);
 }
+@media screen and (min-width: 768px) {
+  .social-icons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media screen and (min-width: 992px) {
+  .social-icons {
+    display: flex;
+  }
 }
