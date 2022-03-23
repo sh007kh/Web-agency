@@ -1028,3 +1028,48 @@ password recovery
 .login-recovery button {
   margin-top: 2rem;
 }
+/* 
+============
+FAQ
+============
+*/
+.question {
+  position: relative;
+  background-color: var(--clr-primary-9);
+  padding-top: 1rem;
+  padding-bottom: 0.125rem;
+  margin-bottom: 1rem;
+  border-radius: var(--radius);
+}
+.question-title {
+  max-width: 85%;
+  margin-left: 1rem;
+  margin-right: auto;
+}
+.question-btns {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translate(0, -50%);
+}
+.question-btn {
+  background-color: transparent;
+  border: transparent;
+  padding: 0.25rem;
+  box-shadow: var(--light-shadow);
+}
+.btn-hide {
+  display: none;
+}
+.question-text {
+  border-top: 1px solid var(--clr-black);
+  /* display: none; */
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 1rem;
+}
+.show-question .question-btns {
+  top: 25%;
+}
